@@ -1,4 +1,4 @@
-# k1-javacore-excercise
+# Lưu ý !
 
 Import project
 File -> Import -> Chọn General -> Trong General chọn Existing Projects into Workspace.
