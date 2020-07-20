@@ -1,0 +1,17 @@
+package com.demo.core.lab2;
+
+public class Employee {
+    private String Name;
+    private int Age;
+    private String Job;
+    private double Salary;
+    private String Department;
+    public Employee(String name, int age, String job, double salary, String department) {
+    	//super();
+    	this.Name = name;
+    	this.Age = age;
+    	this.Job = job;
+    	this.Salary = salary;
+    	this.Department = department;
+    }
+}

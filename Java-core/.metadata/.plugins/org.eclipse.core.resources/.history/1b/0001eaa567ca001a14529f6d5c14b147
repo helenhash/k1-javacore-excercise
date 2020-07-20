@@ -1,0 +1,22 @@
+package com.demo.core.lab6;
+import java.util.Scanner;
+public class Customers {
+      int CMND;
+      String Name;
+      String GaDen;
+      double GiaTien;
+      public static void main(String[] arge){
+    	  Scanner newCustomer = new Scanner(System.in);
+    	  //System.out.println("Information new customer");
+    	  
+    	  int CMND = newCustomer.nextInt();
+    	  String Name = newCustomer.nextLine();
+    	  String GaDen = newCustomer.nextLine();
+    	  double GiaTien = newCustomer.nextDouble();
+    	  System.out.println("CMND: "+ CMND);
+    	  System.out.println("Name: "+ Name);
+    	  System.out.println("Ga Đến: "+ GaDen);
+    	  System.out.println("Giá Tiền: "+ GiaTien);
+    	  
+      }
+}

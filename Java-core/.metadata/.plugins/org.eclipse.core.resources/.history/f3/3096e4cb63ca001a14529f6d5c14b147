@@ -1,0 +1,20 @@
+package com.demo.core.lab4;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args){
+		Employee employee = new Employee("Anh",24, "student", 1000000.0,"aptechhue" );
+		Employee employee2 = new Employee("Sanh",22, "student", 2000000.0,"aptechhue");
+		Employee employee3 = new Employee("Sang",20, "student", 3000000.0,"aptechhue");
+		Employee employee4= new Employee("Thọ",26, "student", 5000000.0,"aptechhue");
+		Employee employee5 = new Employee("Hùng",24, "student", 10000000.0,"aptechhue");
+		List<Employee> employees = new ArrayList<>();
+		employees.add(employee);
+		for(Employee anh: employees){
+			System.out.println(employee.getName()+"\t"+employee.getAge()+"\t"+employee.getJob()+"\t"+employee.getSalary()+"\t"+employee.getDepartment());
+			System.out.println(employee2.getName()+employee2.getAge()+employee2.getJob()+employee2.getSalary()+employee2.getDepartment());
+			System.out.println(employee3.getName()+employee3.getAge()+employee3.getJob()+employee3.getSalary()+employee3.getDepartment());
+			System.out.println(employee4.getName()+employee4.getAge()+employee4.getJob()+employee4.getSalary()+employee4.getDepartment());
+			System.out.println(employee5.getName()+employee5.getAge()+employee5.getJob()+employee5.getSalary()+employee5.getDepartment());
+		}}};
