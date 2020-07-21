@@ -10,25 +10,24 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc 		= new Scanner(System.in);
+		initializeCustomers();
+		Scanner sc		= new Scanner(System.in);
 		int n 			= 0;
-		boolean flag 	= true;
-		addCustomers();
+		boolean flag	= true;
 		do {
 			showMenu();
 			n = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine(); 
 			switch (n) {
-				case 1: addCustomer(); break;
-				case 2:	showInfoCus(); break;
-				case 3: findCustomer(); break;
-				case 4: removeCustomer(); break;
-				case 5:
-				default:
-					flag = false;
-					break;
+			case 1: addCustomer(); break;
+			case 2: showInfoCus(); break;
+			case 3: findCustomer(); break;
+			case 4: removeCustomer(); break;
+			default:
+				flag = false;
+				break;
 			}
-		}while(flag == false);
+		}while(flag == true);
 		sc.close();
 	}
 //	Show menu
@@ -42,10 +41,10 @@ public class Main {
 		System.out.println("Please enter your choise [1-5]: ");
 	}
 	
-// Add customers
-	public static void addCustomers() {
+// Initialize customers
+	public static void initializeCustomers() {
 		Customer customer1 = new Customer("ID1", "Peter", "Ha Noi", 10000);
-		Customer customer2 = new Customer("ID2", "Mira", "Ha Noi", 10000);
+		Customer customer2 = new Customer("ID2", "Mira", "Hue", 5000);
 		listCustomers.add(customer1);
 		listCustomers.add(customer2);
 	}
@@ -56,16 +55,16 @@ public class Main {
 		
 		System.out.println("ID  :");
 		String idCustomer	= sc.nextLine();
-		System.out.println("Name : ");
 		
+		System.out.println("Name : ");
 		String nameCustomer	= sc.nextLine();
+		
 		System.out.println("Destination: ");
 		String destination	= sc.nextLine();
 		
 		System.out.println("Price :");
 		double price		= sc.nextDouble();
 		sc.nextLine();
-		sc.close();
 		customerObj = new Customer(idCustomer, nameCustomer, destination, price);
 				
 		listCustomers.add(customerObj);
@@ -74,11 +73,15 @@ public class Main {
 	}
 //	Show information customer
 	public static void showInfoCus() {
-		System.out.println("----------Show information customer----------");
-		for ( int i = 0 ; i < listCustomers.size() ; i++) {
-			System.out.printf("\t Customer %d \n",i+1);
-			System.out.println(listCustomers.get(i));
-			System.out.println("----------------------------------------");
+		if(listCustomers != null) {
+			System.out.println("----------Show information customer----------");
+			for ( int i = 0 ; i < listCustomers.size() ; i++) {
+				System.out.printf("\t Customer %d \n",i+1);
+				System.out.println(listCustomers.get(i));
+				System.out.println("----------------------------------------");
+			}
+		} else {
+			System.out.println("The list customers is null!");
 		}
 	}
 // Find the customer
@@ -87,7 +90,7 @@ public class Main {
 		String idCus = "";
 		Scanner sc = new Scanner(System.in);
 		boolean flag = false;
-		System.out.println("Enter ID need find : ");
+		System.out.println("Enter ID need to find : ");
 		idCus = sc.nextLine();
 		
 		for ( int i = 0 ; i < listCustomers.size() ; i++) {
@@ -100,7 +103,6 @@ public class Main {
 				flag = true;
 			}
 		}
-		
 		if (flag) {
 			System.out.println("ID customer is not exist!");
 		}
@@ -126,7 +128,4 @@ public class Main {
 			System.out.println("The customer is not exist!");
 		}
 	}
-	
-
-
 }
