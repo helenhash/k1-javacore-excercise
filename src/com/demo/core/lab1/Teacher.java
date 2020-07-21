@@ -1,5 +1,6 @@
 package com.demo.core.lab1;
 
+
 public class Teacher {
 	String name;
 	int age;
@@ -11,8 +12,13 @@ public class Teacher {
 	public Teacher(String subject) {
 		this.subject = subject;
 	}
+	
+	public Teacher(String name, String subject) {
+		this.name = name;
+		this.subject = subject;
+	}
 	public static void main(String[] args) {
-		
-		System.out.println("Teacher Tam teaching Mathematics for Class 1");
+		Teacher tec = new Teacher("Tam", "Mathematics");
+		System.out.println("Teacher " + tec.name + " teaching " + tec.subject + " for Class 1");
 	}
 }
