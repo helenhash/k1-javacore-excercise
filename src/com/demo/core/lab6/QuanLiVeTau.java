@@ -5,6 +5,8 @@
  */
 package lab6;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Tran Huu Tuan
@@ -80,5 +82,10 @@ public class QuanLiVeTau {
     public void setGiaTien(double giaTien) {
         this.giaTien = giaTien;
     }
+    @Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return cmnd +"\t" + tenKH +"\t" +gaDen+"\t" +giaTien;
+	}
     
-}
+   }
