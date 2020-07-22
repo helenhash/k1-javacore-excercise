@@ -23,6 +23,7 @@ public class Main {
 			case 2: showInfoCus(); break;
 			case 3: findCustomer(); break;
 			case 4: removeCustomer(); break;
+			case 5:
 			default:
 				flag = false;
 				break;
@@ -51,6 +52,7 @@ public class Main {
 //	Add customer
 	public static void addCustomer() {
 //		 TODO Auto-generated method stub
+		System.out.println("----------Add customer----------");
 		Scanner	sc = new Scanner(System.in);
 		
 		System.out.println("ID  :");
